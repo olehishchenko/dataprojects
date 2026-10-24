@@ -14,26 +14,27 @@
       theme: {
         extend: {
           colors: {
-            brand: { 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8' }
+            // Custom brand colors mapped to a teal/cyan vibe if needed
+            brand: { 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488' }
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-white">
 
   <!-- Navigation -->
   <nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-        <i class="fa-solid fa-chart-line text-blue-500"></i>
-        <span>DataAnalyst<span class="text-blue-500">.</span></span>
+        <i class="fa-solid fa-chart-line text-teal-400"></i>
+        <span>DataAnalyst<span class="text-teal-400">.</span></span>
       </a>
       <div class="flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-        <a href="https://upwork.com" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-xs tracking-wide uppercase font-semibold transition">
+        <a href="#projects" class="hover:text-teal-300 transition">Projects</a>
+        <a href="#skills" class="hover:text-teal-300 transition">Skills</a>
+        <a href="https://upwork.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-500 hover:to-teal-500 text-white px-4 py-2 rounded-lg text-xs tracking-wide uppercase font-semibold transition shadow-lg shadow-teal-500/20">
           Hire on Upwork
         </a>
       </div>
@@ -42,21 +43,22 @@
 
   <!-- Hero Section -->
   <header class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold mb-6 border border-blue-500/20">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 text-teal-300 text-xs font-semibold mb-6 border border-teal-500/20">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
       Available for freelance contracts on Upwork
     </div>
     <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-      Transforming Complex Data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Actionable Revenue</span>
+      Transforming Complex Data into <br class="hidden md:block" />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Actionable Revenue</span>
     </h1>
     <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
       Data Analyst specializing in SQL modeling, automated Python ETL pipelines, and executive BI dashboards that solve real business bottlenecks.
     </p>
     <div class="flex justify-center gap-4">
-      <a href="#projects" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-blue-500/20">
+      <a href="#projects" class="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-emerald-500/20">
         Explore Case Studies
       </a>
-      <a href="https://github.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg border border-slate-700 transition">
+      <a href="https://github.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg border border-slate-700 transition hover:border-teal-500/50 hover:text-teal-300">
         <i class="fa-brands fa-github mr-2"></i>GitHub
       </a>
     </div>
@@ -70,15 +72,15 @@
         <div class="text-xs text-slate-400 uppercase tracking-wider">Core Tooling</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-indigo-400 mb-1">BI & EDA</div>
+        <div class="text-3xl font-extrabold text-cyan-400 mb-1">BI & EDA</div>
         <div class="text-xs text-slate-400 uppercase tracking-wider">Visualization</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-emerald-400 mb-1">End-to-End</div>
+        <div class="text-3xl font-extrabold text-teal-400 mb-1">End-to-End</div>
         <div class="text-xs text-slate-400 uppercase tracking-wider">ETL & Modeling</div>
       </div>
       <div>
-        <div class="text-3xl font-extrabold text-cyan-400 mb-1">Upwork Ready</div>
+        <div class="text-3xl font-extrabold text-emerald-400 mb-1">Upwork Ready</div>
         <div class="text-xs text-slate-400 uppercase tracking-wider">Fast Turnaround</div>
       </div>
     </div>
@@ -94,92 +96,80 @@
 
       <!-- Skill Filter Buttons -->
       <div class="flex flex-wrap gap-2 text-xs font-medium">
-        <button onclick="filterProjects('all')" class="filter-btn active-filter px-3 py-1.5 rounded-lg bg-blue-600 text-white transition">All</button>
-        <button onclick="filterProjects('python')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Python</button>
-        <button onclick="filterProjects('sql')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">SQL</button>
-        <button onclick="filterProjects('bi')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Power BI / Tableau</button>
+        <button onclick="filterProjects('all')" class="filter-btn active-filter px-3 py-1.5 rounded-lg bg-teal-600 text-white transition shadow-md shadow-teal-500/20">All</button>
+        <button onclick="filterProjects('sql')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">SQL / EDA</button>
+        <button onclick="filterProjects('python')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Python / ML</button>
+        <button onclick="filterProjects('bi')" class="filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Dashboards</button>
       </div>
     </div>
 
     <!-- Project Cards Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Project 1 -->
-      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col" data-category="python bi">
-        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative">
-          <i class="fa-solid fa-users-slash text-5xl text-blue-500/40"></i>
-          <span class="absolute top-3 right-3 bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-500/20">Business Impact</span>
+      <!-- PROJECT 1: RFM & COHORTS (SQL) -->
+      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-cyan-500/50 transition duration-300 flex flex-col group" data-category="sql">
+        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative overflow-hidden">
+          <div class="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition"></div>
+          <i class="fa-solid fa-database text-5xl text-cyan-500/40 group-hover:scale-110 transition duration-300"></i>
+          <span class="absolute top-3 right-3 bg-cyan-500/10 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded border border-cyan-500/20">E-Commerce</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <div class="flex gap-2 mb-2">
-              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Python</span>
-              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Scikit-Learn</span>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-2">SaaS Customer Churn Prediction</h3>
-            <p class="text-sm text-slate-400 mb-4 line-clamp-3">
-              Identified key customer drop-off drivers and built an early warning model targeting users with &gt;70% attrition risk.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs">
-            <span class="text-emerald-400 font-semibold">+18% Retention Insight</span>
-            <div class="flex gap-3 text-slate-300 font-medium">
-              <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-github mr-1"></i>Code</a>
-              <a href="#" class="hover:text-blue-400"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col" data-category="sql">
-        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative">
-          <i class="fa-solid fa-database text-5xl text-indigo-500/40"></i>
-          <span class="absolute top-3 right-3 bg-indigo-500/10 text-indigo-400 text-[10px] font-bold px-2 py-0.5 rounded border border-indigo-500/20">E-Commerce</span>
-        </div>
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex gap-2 mb-2">
-              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">PostgreSQL</span>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-[11px] bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2 py-0.5 rounded">PostgreSQL</span>
               <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Window Functions</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Cohort & RFM Customer Segmentation</h3>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition">E-Commerce RFM & Cohort Analysis</h3>
             <p class="text-sm text-slate-400 mb-4 line-clamp-3">
-              Analyzed 500k+ transactions using complex SQL window functions to classify customers by Lifetime Value (LTV) and RFM scores.
+              Analyzed 500k+ UK retail transactions using advanced SQL (CTEs, NTILE). Built a monthly retention heatmap and segmented the user base into actionable LTV groups.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs">
-            <span class="text-blue-400 font-semibold">RFM Engine</span>
+            <span class="text-cyan-400 font-semibold">4 LTV Segments Discovered</span>
             <div class="flex gap-3 text-slate-300 font-medium">
-              <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-github mr-1"></i>Queries</a>
+              <a href="#" class="hover:text-cyan-400 transition"><i class="fa-brands fa-github mr-1"></i>GitHub</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col" data-category="bi python">
-        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative">
-          <i class="fa-solid fa-chart-pie text-5xl text-emerald-500/40"></i>
-          <span class="absolute top-3 right-3 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">Executive View</span>
+      <!-- PROJECT 2: CHURN (PYTHON) -->
+      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-emerald-500/50 transition duration-300 flex flex-col group" data-category="python">
+        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative overflow-hidden">
+          <div class="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition"></div>
+          <i class="fa-solid fa-users-slash text-5xl text-emerald-500/40 group-hover:scale-110 transition duration-300"></i>
+          <span class="absolute top-3 right-3 bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/20">Machine Learning</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <div class="flex gap-2 mb-2">
-              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Power BI</span>
-              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">DAX</span>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-[11px] bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2 py-0.5 rounded">Python</span>
+              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Scikit-Learn</span>
+              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Random Forest</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Financial Performance Dashboard</h3>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition">SaaS Customer Churn Prediction</h3>
             <p class="text-sm text-slate-400 mb-4 line-clamp-3">
-              Executive dashboard consolidating multi-currency sales, profit margins, and inventory turn rates with interactive drill-downs.
+              Built a predictive model to identify high-risk users. Discovered that month-to-month contracts drive a 5x higher churn rate, forming the basis for a targeted retention strategy.
             </p>
           </div>
           <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs">
-            <span class="text-emerald-400 font-semibold">Live BI Link</span>
+            <span class="text-emerald-400 font-semibold">0.84 ROC-AUC Score</span>
             <div class="flex gap-3 text-slate-300 font-medium">
-              <a href="#" class="hover:text-blue-400"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Dashboard</a>
+              <a href="#" class="hover:text-emerald-400 transition"><i class="fa-brands fa-github mr-1"></i>GitHub</a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: COMING SOON -->
+      <div class="project-card bg-slate-800/40 border border-slate-800 border-dashed rounded-xl overflow-hidden flex flex-col hover:border-teal-500/30 transition" data-category="bi">
+        <div class="h-full flex flex-col items-center justify-center p-10 text-center">
+          <i class="fa-solid fa-chart-pie text-4xl text-slate-700 mb-4"></i>
+          <h3 class="text-lg font-bold text-slate-500 mb-2">Interactive BI Dashboard</h3>
+          <p class="text-sm text-slate-600">
+            Currently building an executive sales dashboard using Power BI / Tableau.
+          </p>
+          <span class="mt-4 px-3 py-1 bg-teal-500/10 border border-teal-500/20 text-teal-500 text-xs rounded-full">Coming Soon</span>
         </div>
       </div>
 
@@ -190,7 +180,7 @@
   <section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
     <h2 class="text-3xl font-bold text-white tracking-tight mb-8 text-center">Technical Toolkit</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
+      <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl hover:border-blue-400/50 transition">
         <h3 class="text-blue-400 font-semibold text-base mb-3 flex items-center gap-2">
           <i class="fa-solid fa-code"></i> Languages & ETL
         </h3>
@@ -198,15 +188,15 @@
           Python (pandas, NumPy), SQL (PostgreSQL, MySQL, BigQuery), Web Scraping (BeautifulSoup), Data Pipelines.
         </p>
       </div>
-      <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
-        <h3 class="text-indigo-400 font-semibold text-base mb-3 flex items-center gap-2">
+      <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl hover:border-cyan-400/50 transition">
+        <h3 class="text-cyan-400 font-semibold text-base mb-3 flex items-center gap-2">
           <i class="fa-solid fa-chart-column"></i> BI & Dashboards
         </h3>
         <p class="text-slate-300 text-sm leading-relaxed">
           Power BI (DAX, Power Query), Tableau Public, Streamlit Apps, Google Sheets, Plotly/Seaborn.
         </p>
       </div>
-      <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl">
+      <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl hover:border-emerald-400/50 transition">
         <h3 class="text-emerald-400 font-semibold text-base mb-3 flex items-center gap-2">
           <i class="fa-solid fa-brain"></i> Statistical Analysis
         </h3>
@@ -218,8 +208,8 @@
   </section>
 
   <!-- Footer / Contact -->
-  <footer class="border-t border-slate-800 py-12 text-center text-slate-500 text-sm">
-    <p class="mb-2">Ready to turn data into growth? Reach out directly via Upwork.</p>
+  <footer class="border-t border-slate-800 py-12 text-center text-slate-500 text-sm bg-slate-900">
+    <p class="mb-2">Ready to turn data into growth? Reach out directly via <a href="https://upwork.com" class="text-teal-400 hover:text-teal-300 transition">Upwork</a>.</p>
     <p>&copy; 2026 Data Analyst Portfolio. Hosted on GitHub Pages.</p>
   </footer>
 
@@ -229,13 +219,17 @@
       const cards = document.querySelectorAll('.project-card');
       const buttons = document.querySelectorAll('.filter-btn');
 
+      // Reset all buttons
       buttons.forEach(btn => {
-        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.remove('bg-teal-600', 'text-white', 'shadow-md', 'shadow-teal-500/20');
         btn.classList.add('bg-slate-800', 'text-slate-300');
       });
+      
+      // Highlight active button
       event.target.classList.remove('bg-slate-800', 'text-slate-300');
-      event.target.classList.add('bg-blue-600', 'text-white');
+      event.target.classList.add('bg-teal-600', 'text-white', 'shadow-md', 'shadow-teal-500/20');
 
+      // Filter cards
       cards.forEach(card => {
         if (tag === 'all' || card.getAttribute('data-category').includes(tag)) {
           card.style.display = 'flex';
