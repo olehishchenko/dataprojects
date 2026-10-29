@@ -14,7 +14,6 @@
       theme: {
         extend: {
           colors: {
-            // Custom brand colors mapped to a teal/cyan vibe if needed
             brand: { 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488' }
           }
         }
@@ -58,7 +57,7 @@
       <a href="#projects" class="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-emerald-500/20">
         Explore Case Studies
       </a>
-      <a href="https://github.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg border border-slate-700 transition hover:border-teal-500/50 hover:text-teal-300">
+      <a href="https://github.com/olehishchenko" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg border border-slate-700 transition hover:border-teal-500/50 hover:text-teal-300">
         <i class="fa-brands fa-github mr-2"></i>GitHub
       </a>
     </div>
@@ -165,15 +164,33 @@
         </div>
       </div>
 
-      <!-- PROJECT 3: COMING SOON -->
-      <div class="project-card bg-slate-800/40 border border-slate-800 border-dashed rounded-xl overflow-hidden flex flex-col hover:border-teal-500/30 transition" data-category="bi">
-        <div class="h-full flex flex-col items-center justify-center p-10 text-center">
-          <i class="fa-solid fa-chart-pie text-4xl text-slate-700 mb-4"></i>
-          <h3 class="text-lg font-bold text-slate-500 mb-2">Interactive BI Dashboard</h3>
-          <p class="text-sm text-slate-600">
-            Currently building an executive sales dashboard using Power BI / Tableau.
-          </p>
-          <span class="mt-4 px-3 py-1 bg-teal-500/10 border border-teal-500/20 text-teal-500 text-xs rounded-full">Coming Soon</span>
+      <!-- PROJECT 3: EXECUTIVE SALES DASHBOARD (BI) -->
+      <div class="project-card bg-slate-800/60 border border-slate-700/60 rounded-xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col group" data-category="bi">
+        <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-700/50 flex items-center justify-center p-6 relative overflow-hidden">
+          <div class="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition"></div>
+          <i class="fa-solid fa-chart-pie text-5xl text-blue-500/40 group-hover:scale-110 transition duration-300"></i>
+          <span class="absolute top-3 right-3 bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-500/20">Business Intelligence</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-[11px] bg-blue-500/10 text-blue-300 border border-blue-500/20 px-2 py-0.5 rounded">Streamlit</span>
+              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Plotly</span>
+              <span class="text-[11px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Excel</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Executive Sales & Margin Dashboard</h3>
+            <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+              Interactive commercial intelligence application tracking multi-region revenue velocity, channel profit margins, and category unit economics with real-time slicing.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between text-xs">
+            <span class="text-blue-400 font-semibold">5k+ Transactions Modeled</span>
+            <div class="flex gap-3 text-slate-300 font-medium">
+              <a href="https://github.com/olehishchenko/executive-sales-dashboard" target="_blank" class="hover:text-teal-400">
+                <i class="fa-brands fa-github mr-1"></i>App & Source Code
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -189,7 +206,7 @@
           <i class="fa-solid fa-code"></i> Languages & ETL
         </h3>
         <p class="text-slate-300 text-sm leading-relaxed">
-          Python (pandas, NumPy), SQL (PostgreSQL, MySQL, BigQuery), Web Scraping (BeautifulSoup), Data Pipelines.
+          Python (pandas, NumPy), SQL (PostgreSQL, SQLite, MySQL), Web Scraping (BeautifulSoup), Data Cleaning & Pipelines.
         </p>
       </div>
       <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl hover:border-cyan-400/50 transition">
@@ -197,7 +214,7 @@
           <i class="fa-solid fa-chart-column"></i> BI & Dashboards
         </h3>
         <p class="text-slate-300 text-sm leading-relaxed">
-          Power BI (DAX, Power Query), Tableau Public, Streamlit Apps, Google Sheets, Plotly/Seaborn.
+          Streamlit Applications, Plotly Interactive Charts, Power BI, Advanced Excel (Pivot Tables, Lookups), Seaborn/Matplotlib.
         </p>
       </div>
       <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl hover:border-emerald-400/50 transition">
@@ -205,7 +222,7 @@
           <i class="fa-solid fa-brain"></i> Statistical Analysis
         </h3>
         <p class="text-slate-300 text-sm leading-relaxed">
-          Hypothesis Testing, A/B Test Evaluation, Regression & Classification, RFM Segmentation, KPI Definition.
+          Hypothesis Testing, A/B Test Evaluation, Churn & Regression Modeling (Scikit-Learn), RFM Segmentation, KPI Frameworks.
         </p>
       </div>
     </div>
